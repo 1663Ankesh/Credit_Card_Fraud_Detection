@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV Prediction Form</title>
+    
+  </head>
+  <body>
+    <h2>CSV Prediction Form</h2>
+
+    <form action="/predict" method="POST">
+      <label for="csv_input">Enter comma-separated values:</label>
+      <input type="text" id="csv_input" name="csv_input" required />
+      <br />
+      <button type="submit">Get Result</button>
+    </form>
+  </body>
+</html>

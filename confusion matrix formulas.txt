@@ -1,0 +1,71 @@
+tn, fp, fn, tp = cm.ravel()
+
+s = """
+True Negatives: {0}
+False Positives: {1}
+False Negatives: {2}
+True Positives: {3}
+""".format(tn, fp, fn, tp)
+
+print(s)
+
+
+
+def accuracy(tn, fp, fn, tp):
+  return (tp + tn) / (tp + tn + fp + fn)
+
+"Accuracy: {0}".format(accuracy(tn, fp, fn, tp))
+
+
+def tpr(tn, fp, fn, tp):
+  return tp / (tp + fn)
+
+"True Positive Rate: {0}".format(tpr(tn, fp, fn, tp))
+
+
+def fnr(tn, fp, fn, tp):
+  return fn / (tp + fn)
+
+"False Negative Rate: {0}".format(fnr(tn, fp, fn, tp))
+
+
+"True Positive Rate + False Negative Rate: {0}".format(tpr(tn, fp, fn, tp) + fnr(tn, fp, fn, tp))
+
+
+def tnr(tn, fp, fn, tp):
+  return tn / (tn + fp)
+
+"True Negative Rate: {0}".format(tnr(tn, fp, fn, tp))
+
+
+
+def fpr(tn, fp, fn, tp):
+  return fp / (tn + fp)
+
+"False Positive Rate: {0}".format(fpr(tn, fp, fn, tp))
+
+
+"True Negative Rate + False Positive Rate: {0}".format(tnr(tn, fp, fn, tp) + fpr(tn, fp, fn, tp))
+
+
+def ppv(tn, fp, fn, tp):
+  return tp / (tp + fp)
+
+"Positive Predictive Value: {0}".format(ppv(tn, fp, fn, tp))
+
+
+def npv(tn, fp, fn, tp):
+  return tn / (tn + fn)
+
+"Negative Predictive Value: {0}".format(npv(tn, fp, fn, tp))
+
+
+def f1(tn, fp, fn, tp):
+  p = ppv(tn, fp, fn, tp)
+  r = tpr(tn, fp, fn, tp)
+  
+  return (2*p*r) / (p + r)
+
+"F1 Score: {0}".format(f1(tn, fp, fn, tp))
+
+

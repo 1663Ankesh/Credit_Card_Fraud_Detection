@@ -1,0 +1,5 @@
+dataset link
+
+https://datahub.io/machine-learning/creditcard#resource-creditcard
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+https://drive.google.com/file/d/1PctWuKWL-yJ2KMX8sDiPcoKpXUbX4KQq/view

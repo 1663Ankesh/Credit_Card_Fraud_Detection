@@ -1,0 +1,57 @@
+Logistic:
+	down:	95.93	wrong:	10
+	up:	94.98	wrong:	5700
+
+KNN:
+	down:	91.05	wrong:	22
+	up:	99.96	wrong:	37
+
+Decision Tree:
+	down:	88.32	wrong:	23
+	up:	99.97	wrong:	23
+
+Gradient Boosting:
+	down:	97.15	wrong:	7
+	up:	99.32	wrong:	767
+
+XGBoost:
+	down:	94.72	wrong:	13
+	up:	99.99	wrong:	7
+
+LightGBM:
+	down:	96.74	wrong:	8
+	up:	99.98	wrong:	22
+
+Voting_Classifier
+	down:	94.72	wrong:	13
+	up:	99.99	wrong:	11
+
+
+
+
+
+CNN:
+	down:	93.90	wrong:	15
+	up:	99.57	wrong:	603
+
+
+
+
+
+Naive_Bayes:
+	down:	85.77	wrong:	35
+	up:	91.88	wrong:	9227
+
+
+
+XG:	
+recall	:0.95
+f1	:0.94528
+
+lightgbm:
+recall	:0.9641
+f1	:0.97
+
+Voting:
+recall	:0.95
+f1	:0.94528
