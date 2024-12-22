@@ -1,16 +1,89 @@
-# Credit Card Fraud Detection using Machine Learning
+# Credit Card Fraud Detection
 
-**creditcard.csv** is the dataset upon which various algorithms have been applied
+This project focuses on detecting fraudulent transactions using a dataset of European cardholders' transactions during September 2013. Various machine learning algorithms were employed to build predictive models, and the performance was evaluated on both upsampled and downsampled datasets. The highest accuracy was achieved using the XGBoost model.
 
-_Most Efficient Algorithm found was XGBoost_
+## Features
 
-# A simple web application have been made using node JS where a user can enter values of v1, v2, ..., v28, amount and the prediction will be shown that whether that is a fraudulent transaction or not
+**Dataset:** Contains transaction data of European cardholders from September 2013.
 
-# Ports:
+**Machine Learning Models:**
 
-server.py runs on _port:5000_
-index.js runs on _port:3000_
+Convolutional Neural Network (CNN)
 
-_PLEASE NOTE_ : The Web Page can be accessed by [http://localhost:3000].
+Decision Tree
 
-_PLEASE NOTE_ : creditcard.csv,KNN_upsampling_model.joblib is not in this repo because of file size limit
+Gradient Boosting
+
+K-Nearest Neighbors (KNN)
+
+LightGBM
+
+Logistic Regression
+
+Long Short-Term Memory (LSTM)
+
+Naive Bayes
+
+Support Vector Machine (SVM)
+
+Voting Classifier
+
+XGBoost
+
+**Performance Metrics:** Accuracy scores are calculated for both upsampled and downsampled datasets.
+
+**Results:** Results are stored in results.txt, detailing the performance of each model.
+
+## Highlights
+
+**Best Model:** XGBoost achieved the highest accuracy:
+
+Downsampled Dataset: **94.71%**
+
+Upsampled Dataset: **99.99%**
+
+_Project Structure_
+
+server.py: Flask-based backend for serving predictions.
+
+XGBoost/xgboost_upsampling_model.joblib: Pretrained XGBoost model file.
+
+results.txt: Contains detailed evaluation results for all models.
+
+requirements.txt: Lists all necessary dependencies.
+
+## Usage
+
+### Model Prediction:
+
+The server.py script serves a /predict endpoint.
+
+Send a JSON payload with transaction data to receive predictions.
+
+Example payload:
+
+{
+"data": [1.0, 0.5, -0.1, ...] // Add values for all required features
+}
+
+### Run the Flask Server:
+
+python server.py
+
+## Analyze Results:
+
+View detailed model performance in results.txt.
+
+## Results
+
+**Model Performance:** Detailed accuracy scores for each model on upsampled and downsampled datasets are available in results.txt.
+
+**XGBoost:** Achieved the best accuracy for fraud detection.
+
+## Future Enhancements
+
+Implement real-time fraud detection with live data streams.
+
+Experiment with ensemble techniques to combine multiple models for improved accuracy.
+
+Integrate additional features such as geographic and temporal data to enhance predictive power.
